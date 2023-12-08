@@ -1,8 +1,0 @@
-domain\Persona.class
-dao\GenericDao.class
-web\ServletControlador.class
-web\ServletRedireccionar.class
-web\ServletModificar.class
-dao\PersonaDao.class
-web\ServletAgregar.class
-servicio\ServicioPersona.class
