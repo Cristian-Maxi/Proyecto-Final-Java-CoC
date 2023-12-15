@@ -1,4 +1,4 @@
-function Boton() {
+function BotonCalular() {
     let cantidad_personas = document.getElementById("Cantidad").value;
     let numero_personas = document.getElementById("numero").value;
     let nombre = document.getElementById("Nombre").value;
