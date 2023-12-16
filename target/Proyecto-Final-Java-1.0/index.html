@@ -35,7 +35,7 @@
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="d-flex justify-content-end navbar-nav">
 						<li><a class="activo" href="#">Inicio</a></li>
-						<li><a href="#calesita">Lugares de interes</a></li>
+						<li><a href="#calesita" class="">Lugares de interes</a></li>
 						<li><a href="#contactenos">Contáctenos</a></li>
 						<li><a href="#titulo-precios">Tours</a></li>
 						<li><a href="#monumentos">Monumentos</a></li>
@@ -185,17 +185,18 @@
 				</div>
 			</div>
 		</section>
-		<section class="mapa">
+		<section class="mapa d-flex flex-column flex-nowrap">
 			<div class="mapita">
+				<p>Necesitas un mapa?</p>
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115903.41005611097!2d-65.43062865!3d-24.7960848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc3a35151b7f9%3A0xa5cd992cd587f206!2sSalta!5e0!3m2!1ses-419!2sar!4v1694998366809!5m2!1ses-419!2sar"
 					width="600" height="600" style="border: 0;" allowfullscreen=""
-					loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				<p>Necesitas un mapa?</p>
+					loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
 			</div>
 			<div class="contenedor-formulario">
 				<h2 id="contactenos">Contáctenos</h2>
-				<form action="">
+				<form action="" class="container text-center">
 					<form action="" method="post">
 						<div class="elemento">
 							<input type="text" name="nombre" id="nombre" required> <label
@@ -210,7 +211,7 @@
 								for="email">Email</label>
 						</div>
 						<div class="elemento">
-							<textarea name="comentario" id="comentario" cols="52" rows="10"
+							<textarea name="comentario" id="comentario" cols="52" rows="5"
 								placeholder="Escriba su comentario..."></textarea>
 						</div>
 						<div class="elemento">
@@ -219,25 +220,25 @@
 					</form>
 			</div>
 		</section>
-		<section class="tour">
-			<h2 id="titulo-precios">Nuestras Ofertas de Tours</h2>
+		<section class="tour container text-center">
+			<h2 id="titulo-precios" class="">Nuestras Ofertas de Tours</h2>
 			<div id="precios">$5000 / 1 persona</div>
-			<div class="precios-tours">
-				<div>
+			<div class="precios-tours container-fluid">
+				<div class="col-8">
 					<p class="descuento">10% Descuento</p>
 					<p>
 						<i style="color: rgb(123, 205, 0);"
 							class="fa-solid fa-check fa-xs"></i> 2 Personas
 					</p>
 				</div>
-				<div>
+				<div class="col-sm-8">
 					<p class="descuento">20% Descuento</p>
 					<p>
 						<i style="color: rgb(123, 205, 0);"
 							class="fa-solid fa-check fa-xs"></i> 3 Personas
 					</p>
 				</div>
-				<div>
+				<div class="col-sm-8">
 					<p class="descuento">30% Descuento</p>
 					<p>
 						<i style="color: rgb(123, 205, 0);"
