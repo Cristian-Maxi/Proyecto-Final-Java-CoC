@@ -152,8 +152,6 @@ nav li:hover {
 .carousel-item img {
     width: 800px;
     height: 600px;
-	max-height:450px;
-	
 }
 
 .carousel-item p {
@@ -464,6 +462,9 @@ footer p:first-child {
 }
 
 
+@media (max-width: 952px) {
+
+} 
 
 
 @media (max-width: 750px) {
@@ -605,7 +606,7 @@ footer p:first-child {
     }
 
     .carousel-item img {
-        height: 300px;
+        height: 400px;
     }
 
     #carrusel h2 {
@@ -717,10 +718,3 @@ footer p:first-child {
     }
 
 }
-
-
-@media (max-width: 400px) {
-	.carousel-item img {
-        height: 200px;
-    }
-} 
