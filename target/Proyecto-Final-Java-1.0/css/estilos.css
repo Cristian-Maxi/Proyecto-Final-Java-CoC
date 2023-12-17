@@ -152,6 +152,7 @@ nav li:hover {
 .carousel-item img {
     width: 800px;
     height: 600px;
+	max-height: 500px;
 }
 
 .carousel-item p {
@@ -462,9 +463,6 @@ footer p:first-child {
 }
 
 
-@media (max-width: 952px) {
-
-} 
 
 
 @media (max-width: 750px) {
@@ -605,6 +603,13 @@ footer p:first-child {
         width: 100%;
     }
 
+	.carousel-inner{
+		max-width: 500px;
+		}
+
+	.carousel-item img {
+	}
+
     .carousel-item img {
         height: 400px;
     }
@@ -718,3 +723,15 @@ footer p:first-child {
     }
 
 }
+
+@media (max-width: 420px) {
+	.carousel-item img{
+		height:300px;
+	}
+} 
+
+@media (max-width: 390px) {
+	.carousel-item img{
+		height:200px;
+	}
+} 
