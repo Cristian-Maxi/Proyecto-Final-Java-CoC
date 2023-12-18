@@ -36,8 +36,9 @@ nav ul {
 nav ul li {
     display: inline-block;
     list-style-type: none;
-    line-height: 80px;
+	line-height: 35px;
     /*
+    line-height: 80px; -> comemntado por gonzalo
     margin: 0px 20px
     */
 }
