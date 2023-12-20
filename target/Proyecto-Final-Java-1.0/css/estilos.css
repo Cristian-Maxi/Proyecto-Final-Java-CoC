@@ -48,12 +48,22 @@ nav ul li a {
     text-decoration: none;
     font-size: larger;
     font-weight: bold;
+	margin:10px 0;
     padding: 7px 13px;
     text-transform:uppercase;
 }
 
+nav ul li a.activo {
+	background: transparent!important;
+}
+
 nav li a.activo, nav li a:hover {
-    background-color: rgb(156, 41, 65);
+    background-color: rgb(156, 41, 65)!important;
+    border-radius: 10px;
+}
+
+nav ul li a.activo:hover {
+    background-color: rgb(156, 41, 65)!important;
     border-radius: 10px;
 }
 
@@ -61,7 +71,6 @@ nav li:hover {
     transition: all .3s linear;
     transform: scale(1.1);
 }
-
 
 .checkbtn {
     font-size: 30px;
@@ -543,9 +552,9 @@ footer p:first-child {
         transition: 0.2s linear;
     }*/
 
-    nav li a.activo {
-        background-color: transparent;
-    }
+	nav ul li a {
+		padding: 7px 13px!important;
+	}
 
     nav li a:hover {
         background-color: rgb(156, 41, 65);
@@ -728,6 +737,20 @@ footer p:first-child {
 }
 
 @media (max-width: 450px) {
+	
+	
+	.logo_container{
+		margin: 5px!important;
+	}
+	
+	.logo {
+		margin: auto!important;
+	}
+	
+	.vr {
+		display:none;
+	}
+
 	.precios-tours{
 		flex-direction: column!important;
 		height:400px;
@@ -737,6 +760,12 @@ footer p:first-child {
 		width:90%;
 		margin: 1px 0 1px 0;
 	}
+	
+	.nav_container {
+		flex-direction: column!important;
+		align-content:center!important;
+	}
+	
 } 
 
 @media (max-width: 420px) {
