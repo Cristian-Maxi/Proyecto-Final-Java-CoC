@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="./css/estilos.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>Proyecto Java</title>
     </head>
     
@@ -294,34 +295,35 @@
 		<section class="estatuas">
 			<h2 id="monumentos">Monumentos</h2>
 			<div class="monumentos d-flex flex-row flex-nowrap justify-content-around">
-				<div class="container p-0 mx-1 w-100">
+				<div class="container p-0 mx-1 w-100" id="container1">
 					<img src="./images/monumento-20-de-febrero.jpg"
 						alt="Monumento 20 de Febrero"
 						class="w-100"
 						>
-					<p>El Monumento a la Victoria de Salta o el Monumento al 20 de
+					<p class="p_monumento container mx-auto my-auto text-start">El Monumento a la Victoria de Salta o el Monumento al 20 de
 						febrero, surgió tras la decisión de la Asamblea General de
 						construir un monumento en honor a la memorable Batalla de Salta y
 						la importante victoria en defensa de los principios de la
 						independencia.</p>
 				</div>
-				<div class="container p-0 mx-1 w-100">
+				<div class="container p-0 mx-1 w-100" id="container2">
 					<img src="./images/Guemes.webp" alt="Monumento Guemes"
 						class="w-100"
-					>El
-					Monumento a Martín Miguel de Güemes está ubicado al final del Paseo
+					>
+					<p class="p_monumento container mx-auto my-auto text-start">El Monumento a Martín Miguel de Güemes está ubicado al final del Paseo
 					Güemes a los pies del Cerro San Bernardo donde el general cayó por
 					primera vez de su caballo mientras cabalgaba herido de bala a la
 					cañada de la Horqueta, donde murió unos días después.
+					</p>
 				</div>
-				<div class="container p-0 mx-1 w-100">
+				<div class="container p-0 mx-1 w-100" id="container3">
 					<img src="./images/San Martin.webp" alt="Monumento a Arsenales"
-						class="w-100"
-					>Este
-					Monumento que se encuentra emplazado en el centro de la plaza,
+						class="w-100">
+					<p class="p_monumento container mx-auto my-auto text-start">Este monumento que se encuentra emplazado en el centro de la plaza,
 					corresponde al Gral. Juan Antonio Álvarez de Arenales, quien en
 					1824, fue Gobernador de Salta y combatiente en la lucha de la
 					independencia por las Provincias Unidas del Río de la Plata.
+					</p>
 				</div>
 			</div>
 		</section>
@@ -347,5 +349,6 @@
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="./js/precios.js"></script>
+	<script src="./js/eventos.js"></script>
 </body>
 </html>

@@ -110,24 +110,34 @@ nav li:hover {
 }
 
 .monumentos div {
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0px 0px 20px black;
     color: aliceblue;
     font-size: 17px;
-    text-align: center;
     border-radius: 10px;
+	max-width: 600px;
+	height:300px;
 }
 
+.monumentos p {
+	display:none;
+}
+
+/*
 .monumentos div:hover {
     height: 500px;
+	overflow:visible;
     transition: 1s;
-}
+}*/
 
 .monumentos div img {
-    width: 300px;
-    height: 300px;
+	object-fit:cover;
+	width:100%;
+	height:100%;
+}
+
+.monumentos div p {
+	overflow:visible;
 }
 
 .estatuas h2 {
@@ -467,16 +477,16 @@ footer p:first-child {
     color: deeppink;
 }
 
-@media screen and (min-width: 750px) and (max-width: 1000px) {
-	.monumentos {
-		height:250px!important;
+@media screen and (min-width: 750px) and (max-width: 950px) {	
+	.estatuas {
+		height:500px;
 	}
-	.monumentos div {
-		height:250px;
-	}
-	.monumentos div img {
-		height:250px;
-	}
+	
+	/*
+	.monumentos div:hover{		
+		height:600px;
+		transition: 1s;
+	}*/
 }
 
 
@@ -594,22 +604,25 @@ footer p:first-child {
         margin: 20px 10px;
     }
 
+/*
     .monumentos div {
         width: 130px;
         height: 150px;
         font-size: 13px;
-    }
+    }*/
 
+/*
     .monumentos div img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-	}
+	}*/
 
+/*
     .monumentos div:hover {
-        height: 430px;
+        height: 350px;
         transition: 1s;
-    }
+    }*/
 
     nav li:hover {
         transition: all .3s linear;
@@ -773,6 +786,11 @@ footer p:first-child {
 	
 } 
 
+@media screen and (min-width: 420px) and (max-width: 460px) {
+	
+}
+
+
 @media (max-width: 420px) {
 	.carousel-item img{
 		height:300px;
@@ -789,10 +807,11 @@ footer p:first-child {
 		margin-bottom:10px!important;
 	}
 	
+	/*
     .monumentos div:hover {
-        height: 3000px;
         transition: 1s;
-    }
+		overflow: visible;
+    }*/
 } 
 
 @media (max-width: 390px) {
