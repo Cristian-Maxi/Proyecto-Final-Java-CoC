@@ -467,7 +467,17 @@ footer p:first-child {
     color: deeppink;
 }
 
-
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+	.monumentos {
+		height:250px!important;
+	}
+	.monumentos div {
+		height:250px;
+	}
+	.monumentos div img {
+		height:250px;
+	}
+}
 
 
 @media (max-width: 750px) {
