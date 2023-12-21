@@ -739,7 +739,7 @@ footer p:first-child {
 	}
 	
 	.logo {
-		margin: auto!important;
+		margin-bottom: 10px!important;
 	}
 	
 	.vr {
