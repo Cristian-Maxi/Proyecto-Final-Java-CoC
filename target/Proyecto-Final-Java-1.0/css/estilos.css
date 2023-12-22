@@ -122,6 +122,10 @@ nav li:hover {
 .monumentos p {
 	display:none;
 }
+.p_monumentos {
+    color: aliceblue;
+    font-size: 20px;
+}
 
 /*
 .monumentos div:hover {
