@@ -3,11 +3,11 @@ $(document).ready(function() {
   var clicked = null;
 
   // Función para mostrar el párrafo y ocultar los otros contenedores cuando se hace clic en la imagen de un contenedor
-  $(".container img").click(function(event) {
+  $(".monumento img").click(function(event) {
     event.stopPropagation();
     var id = $(this).parent().attr("id"); // Obtiene el id del contenedor que se ha clicado
     if (clicked !== id) {
-      $(".container").fadeOut(500); // Oculta todos los contenedores con un efecto de desvanecimiento
+      $(".monumento").fadeOut(500); // Oculta todos los contenedores con un efecto de desvanecimiento
       $("#" + id).fadeIn(500); // Muestra el contenedor que se ha clicado con un efecto de aparición gradual
       $("#" + id + " img").show(); // Muestra la imagen del contenedor que se ha clicado
       $("#" + id + " p").show(); // Muestra el párrafo del contenedor que se ha clicado instantáneamente
@@ -16,8 +16,8 @@ $(document).ready(function() {
         $("#monumentos").css("margin-bottom", "10px"); // Reduce el margin-bottom del elemento h2 con id "monumentos" a 0
       }
     } else {
-      $(".container").fadeIn(500); // Muestra todos los contenedores con un efecto de aparición gradual
-      $(".container p").hide(); // Oculta todos los párrafos instantáneamente
+      $(".monumento").fadeIn(500); // Muestra todos los contenedores con un efecto de aparición gradual
+      $(".monumento p").hide(); // Oculta todos los párrafos instantáneamente
       clicked = null; // Restablece la variable
       if (window.matchMedia("(max-width: 420px)").matches) {
         $("#monumentos").css("margin-bottom", "250px"); // Reestablece el margin-bottom del elemento h2 con id "monumentos" a 250px
@@ -28,8 +28,8 @@ $(document).ready(function() {
   // Función para ocultar los párrafos y mostrar todos los contenedores cuando se hace clic en cualquier parte de la página
   $(document).click(function() {
     if (clicked !== null) { // Solo se ejecuta si previamente se ha hecho clic en una imagen
-      $(".container").fadeIn(500); // Muestra todos los contenedores con un efecto de aparición gradual
-      $(".container p").hide(); // Oculta todos los párrafos instantáneamente
+      $(".monumento").fadeIn(500); // Muestra todos los contenedores con un efecto de aparición gradual
+      $(".monumento p").hide(); // Oculta todos los párrafos instantáneamente
       clicked = null; // Restablece la variable
       if (window.matchMedia("(max-width: 420px)").matches) {
         $("#monumentos").css("margin-bottom", "250px"); // Reestablece el margin-bottom del elemento h2 con id "monumentos" a 250px
