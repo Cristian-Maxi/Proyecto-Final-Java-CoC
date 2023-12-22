@@ -226,6 +226,10 @@ nav li:hover {
     box-shadow: 0px 0px 30px 5px black;
 }
 
+.mapita {
+	max-width:690px;
+}
+
 .mapita iframe {
     border-radius: 10px;
     padding: 1px;
@@ -792,9 +796,16 @@ footer p:first-child {
 
 
 @media (max-width: 420px) {
+	
+	.estatuas {	
+		margin-bottom: 40px;
+	}
+	
+	#monumentos {
+		margin-bottom: 250px;
+	}
+	
 	.carousel-item img{
-		height:300px;
-		max-width:400px!important;
 	}
 	
 	.monumentos {
