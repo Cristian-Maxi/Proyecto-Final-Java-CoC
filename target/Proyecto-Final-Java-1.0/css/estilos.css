@@ -11,7 +11,6 @@ header {
     position: sticky;
     top: 0px;
     background-color: black;
-    height: 80px;
     width: 100%;
     border: 2px solid rgb(156, 41, 65);
     z-index: 10;
@@ -24,18 +23,24 @@ header {
 
 .logo {
     height: 40px;
+    height: 80px;
 }
 
 nav ul {
     float: right;
+    /* comentado por gonzalo
     margin-right: 20px;
+    */
 }
 
 nav ul li {
     display: inline-block;
     list-style-type: none;
-    line-height: 80px;
+	line-height: 35px;
+    /*
+    line-height: 80px; -> comemntado por gonzalo
     margin: 0px 20px
+    */
 }
 
 nav ul li a {
@@ -43,12 +48,22 @@ nav ul li a {
     text-decoration: none;
     font-size: larger;
     font-weight: bold;
+	margin:10px 0;
     padding: 7px 13px;
     text-transform:uppercase;
 }
 
+nav ul li a.activo {
+	background: transparent!important;
+}
+
 nav li a.activo, nav li a:hover {
-    background-color: rgb(156, 41, 65);
+    background-color: rgb(156, 41, 65)!important;
+    border-radius: 10px;
+}
+
+nav ul li a.activo:hover {
+    background-color: rgb(156, 41, 65)!important;
     border-radius: 10px;
 }
 
@@ -56,7 +71,6 @@ nav li:hover {
     transition: all .3s linear;
     transform: scale(1.1);
 }
-
 
 .checkbtn {
     font-size: 30px;
@@ -73,26 +87,19 @@ nav li:hover {
 }
 
 .cabecera {
-    background-image: url(../images/Cabildo.jpg);
-    width: 100%;
-    height: 600px;
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .texto {
+	/*
     position: relative;
+    */
     color: aliceblue;
-    width: 500px;
     padding: 10px;
     border: 1px solid black;
     background-color: rgba(0, 0, 0, 0.403);
     border-radius: 15px;
     text-align: center;
     font-size: 20px;
-    left: 70%;
-    top: 5px;
 }
 
 .monumentos {
@@ -103,24 +110,38 @@ nav li:hover {
 }
 
 .monumentos div {
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0px 0px 20px black;
     color: aliceblue;
     font-size: 17px;
-    text-align: center;
     border-radius: 10px;
+	max-width: 600px;
+	height:300px;
 }
 
+.monumentos p {
+	display:none;
+}
+.p_monumentos {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+/*
 .monumentos div:hover {
     height: 500px;
+	overflow:visible;
     transition: 1s;
-}
+}*/
 
 .monumentos div img {
-    width: 300px;
-    height: 300px;
+	object-fit:cover;
+	width:100%;
+	height:100%;
+}
+
+.monumentos div p {
+	overflow:visible;
 }
 
 .estatuas h2 {
@@ -136,6 +157,7 @@ nav li:hover {
 
 .contenedor-carrusel {
     width: 50%;
+	max-width: 500px!important;
     margin: auto;
     box-shadow: 0px 0px 20px black;
 }
@@ -152,8 +174,8 @@ nav li:hover {
 }
 
 .carousel-item img {
-    width: 800px;
-    height: 600px;
+	max-height: 500px;
+	object-fit: cover;
 }
 
 .carousel-item p {
@@ -167,17 +189,17 @@ nav li:hover {
 }
 
 .parrafo {
-    width: 50%;
-    margin: 20px auto 0px;
+    margin: auto;
     text-align: center;
     color: aliceblue;
-    border: 3px solid black;
+    border: 1px solid black;
     background-color: rgba(156, 41, 66, 0.653);
     box-shadow: 0px 0px 15px black;
 }
 
 .parrafo p {
     text-shadow: 0px 0px 10px black;
+    text-indent: 20px;
 }
 
 .parrafo h3 {
@@ -206,6 +228,10 @@ nav li:hover {
     background-color: rgba(156, 41, 66, 0.653);
     border-radius: 10px;
     box-shadow: 0px 0px 30px 5px black;
+}
+
+.mapita {
+	max-width:690px;
 }
 
 .mapita iframe {
@@ -349,7 +375,7 @@ footer p:first-child {
     text-align: center;
     color: aliceblue;
     background-color: rgb(156, 41, 65);
-    margin: 20px 200px;
+    margin: 20px 100px;
     border-radius: 10px;
     padding: 5px;
     text-shadow: 0px 0px 10px black;
@@ -360,7 +386,7 @@ footer p:first-child {
     text-align: center;
     color: aliceblue;
     background-color: rgb(156, 41, 65);
-    width: 600px;
+    width: 300px;
     margin: 20px auto;
     border-radius: 10px;
     padding: 5px;
@@ -370,16 +396,12 @@ footer p:first-child {
 }
 
 .precios-tours {
-    width: auto;
-    height: 300px;
     display: flex;
     justify-content: space-evenly;
     margin: 35px 0px;
 }
 
 .precios-tours div {
-    width: 300px;
-    height: 300px;
     overflow: hidden;
     box-shadow: 0px 0px 10px black;
     color: aliceblue;
@@ -463,10 +485,17 @@ footer p:first-child {
     color: deeppink;
 }
 
-
-@media (max-width: 952px) {
-
-} 
+@media screen and (min-width: 750px) and (max-width: 950px) {	
+	.estatuas {
+		height:500px;
+	}
+	
+	/*
+	.monumentos div:hover{		
+		height:600px;
+		transition: 1s;
+	}*/
+}
 
 
 @media (max-width: 750px) {
@@ -529,6 +558,7 @@ footer p:first-child {
         position: sticky;
     }
 
+/*
     header ul {
         position: absolute;
         width: 200px;
@@ -543,11 +573,11 @@ footer p:first-child {
         transform: scale(0);
         opacity: 0;
         transition: 0.2s linear;
-    }
+    }*/
 
-    nav li a.activo {
-        background-color: transparent;
-    }
+	nav ul li a {
+		padding: 7px 13px!important;
+	}
 
     nav li a:hover {
         background-color: rgb(156, 41, 65);
@@ -582,21 +612,25 @@ footer p:first-child {
         margin: 20px 10px;
     }
 
+/*
     .monumentos div {
         width: 130px;
         height: 150px;
         font-size: 13px;
-    }
+    }*/
 
+/*
     .monumentos div img {
-        width: 150px;
-        height: 150px;
-    }
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+	}*/
 
+/*
     .monumentos div:hover {
-        height: 430px;
+        height: 350px;
         transition: 1s;
-    }
+    }*/
 
     nav li:hover {
         transition: all .3s linear;
@@ -606,6 +640,13 @@ footer p:first-child {
     .contenedor-carrusel {
         width: 100%;
     }
+
+	.carousel-inner{
+		max-width: 500px;
+		}
+
+	.carousel-item img {
+	}
 
     .carousel-item img {
         height: 400px;
@@ -719,4 +760,89 @@ footer p:first-child {
         width: 110px;
     }
 
+}
+
+@media (max-width: 450px) {
+	
+	
+	.logo_container{
+		margin: 5px!important;
+	}
+	
+	.logo {
+		margin-bottom: 10px!important;
+	}
+	
+	.vr {
+		display:none;
+	}
+
+	.precios-tours{
+		flex-direction: column!important;
+		height:400px;
+		align-items: center;
+	}
+	.precios-tours div {
+		width:90%;
+		margin: 1px 0 1px 0;
+	}
+	
+	.nav_container {
+		flex-direction: column!important;
+		align-content:center!important;
+	}
+	
+} 
+
+@media screen and (min-width: 420px) and (max-width: 460px) {
+	
+}
+
+
+@media (max-width: 420px) {
+	
+	.estatuas {	
+		margin-bottom: 40px;
+	}
+	
+	#monumentos {
+		margin-bottom: 250px;
+	}
+	
+	.carousel-item img{
+	}
+	
+	.monumentos {
+		flex-direction: column!important;
+		align-items: center!important;
+	}
+	
+	.monumentos div{
+		width:75%!important;
+		margin-bottom:10px!important;
+	}
+	
+	/*
+    .monumentos div:hover {
+        transition: 1s;
+		overflow: visible;
+    }*/
+} 
+
+@media (max-width: 390px) {
+	.carousel-item img{
+		height:200px;
+	}
+} 
+
+@media (max-width: 335px) {
+	.contenedor-formulario h2{
+		font-size:20px
+	}
+} 
+
+@media (max-width: 250px) {
+	.contenedor-formulario h2{
+		font-size:10px
+	}
 }
